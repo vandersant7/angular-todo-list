@@ -7,6 +7,18 @@
   }
 
   form {
+
+    .form-group {
+      .invisible {
+        visibility: hidden;
+        height: 0;
+      }
+      
+      .visible {
+        visibility: visible;
+      }
+
+    }
     #submitButton {
       margin-top: 1.25rem;
     }
