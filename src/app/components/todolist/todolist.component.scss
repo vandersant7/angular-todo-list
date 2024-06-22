@@ -17,6 +17,12 @@
         #myCheckbox {
           margin-left: 30px;
         }
+
+        td {
+          .completed {
+            text-decoration: line-through;
+          }
+        }
       }
   }
 }

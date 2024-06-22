@@ -4,16 +4,19 @@
     <div class="form-group">
       <label for="task">Tarefa</label>
       <input
-      type="task"
+      type="text"
       class="form-control"
-      id="task" placeholder="Digite uma tarefa"
-      ngModel name="task"
+      id="task"
+      placeholder="Digite uma tarefa"
+      ngModel
+      name="task"
       >
       <small
-      *ngIf="taskForm.invalid && taskForm.dirty"
+      *ngIf=""
       id="error message"
       class="form-text text-danger"
-      >Required field.
+      >
+      Required field.
     </small>
     </div>
 
@@ -37,7 +40,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let t of taskArray; index as i">
-        <td> {{t.taskName}} </td>
+        <td> <span [class.completed]="t.isCompleted" >{{t.taskName}} </span></td>
         <td><input (change)="onChecked(i)" type="checkbox" id="myCheckbox"></td>
         <td><button
           class="btn btn-danger btn-sm"
